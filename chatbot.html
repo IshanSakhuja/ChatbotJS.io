@@ -1,0 +1,64 @@
+<html>
+  <head>
+    <title>Chatbot</title>
+    <script>
+      function fun1()
+      {
+        var temp = document.getElementById("ishan").style.color = "#39ff14";
+      }
+      var a = 0;
+      var p = new Array(
+            "Where do you live?",
+          "What do you do ?",
+        "Are you married or single?",
+      "Do you have any pets?",
+      "It was nice talking to you :)");
+      function enterpressalert(e, textarea)
+      {
+      var code = (e.keyCode ? e.keyCode : e.which);
+      if(code == 13)
+      {
+        document.getElementById("ishan").value = "";
+        document.getElementById("change").innerHTML = p[a];
+        a = a + 1;
+        if(a === 5)
+        {
+        document.getElementById("ishan").style.visibility = "hidden";
+        }
+      }
+      }
+    </script>
+    <style>
+      .title{
+        background : #000000;
+        color : #39ff14;
+        position: absolute;
+        left : 36%;
+        top : 40%;
+        down : 50%;
+        font-size: 270%;
+      }
+      .in{
+        text-decoration-color: #39ff14;
+        background : #000000;
+        position: absolute;
+        left : 38%;
+        top : 55%;
+        down : 50%;
+        height : 8%;
+        width :20%;
+        font-size : 15px;
+        border-style: solid;
+        border-color: #00000;
+        text-align : center;
+        font-size : 95%;
+      }
+    </style>
+  </head>
+  <body bgColor = "#000000">
+    <strong><h1 class = "title" id = "change">What is your name?</h1></strong>
+    <div border-color : #00000>
+      <input type = "text" class = "in" placeholder="Enter Your Response" onclick = "fun1()" id="ishan" onKeyDown="enterpressalert(event,this)"/>
+    </div>
+  </body>
+<html>
